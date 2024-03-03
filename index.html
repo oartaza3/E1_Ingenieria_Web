@@ -4,6 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bit4All - Home</title> <!-- Cambiar en cada página -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/Normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
     </head>
     <body>
         <header>
@@ -12,22 +17,21 @@
 
         <div class="contenedor-nav">
             <nav class="contenedor nav-barra-principal">
-                <ul>
-                    <li><img src="img/Bit4all_logo.png" alt="Imagen logo"></li>
-                    <li><a href="index.html">Inicio</a></li>
+                <ul id="nav-bar-list">
+                    <li><img id="logo-nav" src="img/Logo_mov.gif" alt="Imagen logo"></li>
+                    <li><a class="btn-nav" href="index.html">Inicio</a></li>
                     <!-- Noticias, precios (tablas, listas)... -->
-                    <li><a href="nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="aprende.html">Aprende</a></li>
-                    <li><a href="registro.html">Iniciar sesión /
+                    <li><a class="btn-nav" href="nosotros.html">Sobre nosotros</a></li>
+                    <li><a class="btn-nav" href="aprende.html">Aprende</a></li>
+                    <li><a class="btn-nav" id="Inicio-sesion-nav" href="registro.html">Iniciar sesión /
                             Registrarse</a></li>
                     <!-- Formulario. A la derecha del todo. -->
                 </ul>
             </nav>
         </div>
 
-        <section>
-            <div class="background-img-hero"></div>
-            <!-- Img o gif en CSS a la drcha. -->
+        <section class="hero-section">
+           
             <div class="slogan-hero">
                 <h2>Bienvenido a Bit4All</h2>
                 <h3>La plataforma de exchange de criptomonedas española que se
@@ -40,22 +44,24 @@
                 <a href="registro.html" class="btn">¡Empieza ahora!</a>
                 <!-- btn -->
             </div>
+            <div class="background-img-hero"></div>
+            <!-- Img o gif en CSS a la drcha. -->
         </section>
 
         <section class="noticia contenedor"> <!-- Noticia destacada del día. -->
+            <h2 class="cabecera-noticias-destacadas">Noticia destacada del
+                día</h2>
             <div class="box-img-noticia">
                 <img src="img/Bitcoin_noticia.png" alt="Imagen de noticia">
             </div> <!-- Imagen noticia del dia-->
             <div class="box-txt-noticia">
-                <h2 class="cabecera-noticias-destacadas">Noticia destacada del
-                    día</h2>
-                <h2>Bitcoin supera los 60.000 dólares por primera vez desde
+                <h3>Bitcoin supera los 60.000 dólares por primera vez desde
                     2021: ¿estamos ante un nuevo momento dulce en las
-                    cripto?</h2> <!-- Titular -->
-                <h3>La criptomoneda Bitcoin supera los 60.000 dólares por la
+                    cripto?</h3> <!-- Titular -->
+                <h4>La criptomoneda Bitcoin supera los 60.000 dólares por la
                     aprobación de los cambios regulatorios para la puesta en
                     marcha de fondos cotizados al contado por parte de la
-                    Comisión de Bolsa y Valores de Estados Unidos</h3>
+                    Comisión de Bolsa y Valores de Estados Unidos</h4>
                 <!-- Subtitulo -->
                 <!-- COMPLETAR VÍNCULO PALABRA BITCOIN -->
                 <p>El pasado 3 de enero de este año, <a href="#">Bitcoin</a>
@@ -78,7 +84,7 @@
                     poco recorrido para llegar a los 69.000 dólares que alcanzó
                     en noviembre de 2021, este récord se percibe como una
                     victoria.</p>
-                <p class="autor-noticia">ANA HIGUERA 29.02.2024</p>
+                <p class="autor-noticia">ANA HIGUERA - 29.02.2024</p>
                 <p class="fuente-noticia">Fuente: <a
                         href="https://www.20minutos.es/tecnologia/actualidad/bitcoin-supera-60-000-dolares-por-primera-vez-desde-2021-5223122/">20minutos</a></p>
             </div>
@@ -87,7 +93,7 @@
             <div class="footer-flex contenedor">
                 <div class="footer-navegacion">
                     <h3>Índice</h3>
-                    <nav class="navegacion">
+                    <nav>
                         <a class="enlace" href="#">Noticia del día</a>
                         <a href="#">Cotización actualizada</a> <!-- DESPLEGABLE -->
                         <a href="#">Planes y tarifas</a>
@@ -95,7 +101,7 @@
                 </div>
                 <div class="footer-navegacion">
                     <h3>Sobre nosotros</h3>
-                    <nav class="navegacion">
+                    <nav>
                         <a href="#">Nuestra historia</a>
                         <a href="#">Nuestro equipo</a>
                         <a href="#">Merchandising</a>
@@ -129,9 +135,10 @@
                             <a href="https://www.instagram.com"> <img src="img/instagram.png" alt="Bit4All en Instagram" title="Bit4All en Instagram"></a>
                         </li>
                     </ul>
+                    <p> © Todos los derechos reservados - Bit4All 2020.</p>
                 </section>
             </div>
-            <p $copy>  Todos los derechos reservados. Bit4All 2020.</p>
+            
         </footer>
     </body>
 </html>
