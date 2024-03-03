@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bit4All - Registro</title>
+    </head>
+    <body>
+        <!-- INSERTAR NAV  -->
+
+        <main>
+            <section>
+                <!-- Registrarse -->
+                <form action="#" method="post">
+                    <h2>Registrarse</h2>
+                    <label for="nombre">Nombre completo: </label>
+                    <input type="text" id="nombre" name="nombre" required
+                        placeholder="Escribe tu nombre">
+
+                    <label for="email">Correo electrónico: </label>
+                    <input type="email" id="email" name="email" required
+                        placeholder="xxxxx@gmail.com">
+
+                    <label for="contraseña">Contraseña: </label>
+                    <input type="password" id="contraseña" name="contrasena"
+                        required>
+
+                    <label for="confirmar-contraseña">Confirmar contraseña:
+                    </label>
+                    <input type="password" id="confirmar-contraseña"
+                        name="confirmar-contrasena" required>
+                    
+                    <label for="radio-genero">Género: </label>
+                    <input type="radio" id="radio-genero" name="genero" value="hombre"
+                        checked="checked"> Hombre
+                    
+                     
+                    <input type="radio" id="radio-genero" name="genero" value="mujer"
+                        checked="checked"> Mujer
+                    
+
+                    <label for="campo-select"> ¿Cuánta experiencia tienes en criptos?</label>
+                    <select id="campo-select" name="experiencia">
+                       
+                            <option label="Ninguna, pero estoy interesado." selected>Ninguna</option>
+                            <option label="Poca, algo he oído.">Poca</option>
+                            <option label="Bastante, llevo un tiempo en el mundillo.">Bastante</option>
+                            <option label="¡Muchísima! Me apasionan las criptomonedas.">Mucha</option>
+                       
+                    </select>
+                    
+                    <label for="check"> ¿De qué criptomonedas has oído hablar?</label>
+                    <input type="checkbox" id="check" name="BTC" value="1"> BTC - Bitcoin
+                    <input type="checkbox" id="check" name="ETH" value="1"> ETH - Ethereum
+                    <input type="checkbox" id="check" name="SOL" value="1"> SOL - Solana
+                    
+                    Otros: <textarea name="textarea" rows="1" cols="10"></textarea>
+
+                    <button class="btn" type="submit">Registrarse</button>
+                </form>
+                
+                <!-- Iniciar sesión -->
+                <form action="#" method="post">
+                    <h2>Iniciar sesión</h2>
+                    
+                    <label for="email">Correo electrónico: </label>
+                    <input type="email" id="email" name="email" required
+                        placeholder="xxxxx@gmail.com">
+
+                    <label for="contraseña">Contraseña: </label>
+                    <input type="password" id="contraseña" name="contrasena"
+                        required>
+                    <!-- ID? Se repite en ambos formularios. Igual mejor clase?-->
+                    <button class="btn" type="submit">Iniciar sesión</button>
+                </form>
+
+                </div>
+                <!-- INICIAR SESIÓN EN EL LATERAL  -->
+            </section>
+        </main>
+
+    </body>
+</html>
