@@ -3,15 +3,41 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bit4All - Registro</title>
+        <title>Bit4All - Registro</title> <!-- Cambiar en cada página -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/Normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
     </head>
     <body>
-        <!-- INSERTAR NAV  -->
+        <header>
+            <h1 class="nombre-empresa">Bit<span>4</span>All</h1>
+        </header>
+
+        <div class="contenedor-nav">
+            <nav class="contenedor nav-barra-principal">
+                <ul id="nav-bar-list">
+                    <li><img id="logo-nav" src="img/Bit4all_logo.png" alt="Imagen logo"></li>
+
+                    <li><a class="btn-nav" href="index.html">Inicio</a></li>
+                    <!-- Noticias, precios (tablas, listas)... -->
+                    <li><a class="btn-nav" href="nosotros.html">Sobre
+                            nosotros</a></li>
+                    <li><a class="btn-nav" href="aprende.html">Aprende</a></li>
+                    <li><a class="btn-nav" id="Inicio-sesion-nav"
+                            href="registro.html">Iniciar sesión /
+                            Registrarse</a></li>
+                    <!-- Formulario. A la derecha del todo. -->
+                </ul>
+            </nav>
+        </div>
 
         <main>
-            <section>
+            <section class="formularios-registro">
                 <!-- Registrarse -->
-                <form action="#" method="post">
+                <form class="registrarse" action="#" method="post">
                     <h2>Registrarse</h2>
                     <label for="nombre">Nombre completo: </label>
                     <input type="text" id="nombre" name="nombre" required
@@ -32,11 +58,11 @@
                     
                     <label for="radio-genero">Género: </label>
                     <input type="radio" id="radio-genero" name="genero" value="hombre"
-                        checked="checked"> Hombre
+                        > Hombre
                     
                      
                     <input type="radio" id="radio-genero" name="genero" value="mujer"
-                        checked="checked"> Mujer
+                        > Mujer
                     
 
                     <label for="campo-select"> ¿Cuánta experiencia tienes en criptos?</label>
@@ -50,17 +76,17 @@
                     </select>
                     
                     <label for="check"> ¿De qué criptomonedas has oído hablar?</label>
-                    <input type="checkbox" id="check" name="BTC" value="1"> BTC - Bitcoin
-                    <input type="checkbox" id="check" name="ETH" value="1"> ETH - Ethereum
-                    <input type="checkbox" id="check" name="SOL" value="1"> SOL - Solana
-                    
-                    Otros: <textarea name="textarea" rows="1" cols="10"></textarea>
-
+                    <ul>
+                    <li><input type="checkbox" id="check" name="BTC" value="1"> BTC - Bitcoin </li>
+                    <li><input type="checkbox" id="check" name="ETH" value="1"> ETH - Ethereum </li>
+                    <li><input type="checkbox" id="check" name="SOL" value="1"> SOL - Solana </li>
+                    <li>Otras: <textarea name="textarea" rows="1" cols="10"></textarea> </li>
+                </ul>
                     <button class="btn" type="submit">Registrarse</button>
                 </form>
                 
                 <!-- Iniciar sesión -->
-                <form action="#" method="post">
+                <form class="iniciar-sesion" action="#" method="post">
                     <h2>Iniciar sesión</h2>
                     
                     <label for="email">Correo electrónico: </label>
@@ -79,5 +105,56 @@
             </section>
         </main>
 
+        <footer class="site-footer">
+            <div class="footer-flex contenedor">
+                <div class="footer-navegacion">
+                    <h3>Índice</h3>
+                    <nav>
+                        <a class="enlace" href="#">Noticia del día</a>
+                        <a href="#">Cotización actualizada</a> <!-- DESPLEGABLE -->
+                        <a href="#">Planes y tarifas</a>
+                    </nav>
+                </div>
+                <div class="footer-navegacion">
+                    <h3>Sobre nosotros</h3>
+                    <nav>
+                        <a href="./nosotros.html">Nuestra historia</a>
+                        <a href="./nosotros.html">Nuestro equipo</a>
+                        <a href="#">Merchandising</a>
+                    </nav>
+                </div>
+                <div class="footer-navegacion">
+                    <h3>Aprende</h3>
+                    <nav>
+                        <a href="./aprende.html">Sobre bitcoin</a>
+                        <a href="./aprende.html">Sobre blockchain</a>
+                    </nav>
+                </div>
+                <div class="footer-navegacion">
+                    <h3>Accede</h3>
+                    <nav>
+                        <a href="./registro.html">Iniciar sesión</a>
+                        <a href="./registro.html">Registrarse</a>
+                    </nav>
+                </div>
+            </div>
+            <div>
+                <section  class="footer-RRSS">
+                    <ul>
+                        <li>
+                            <a href="mailto:Bit4All@gmail.com"> <img src="img/mail_logo.png" alt="Correo de Bit4All" title="Escribenos por correo"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedIn.com"> <img src="img/linkedin.png" alt="Bit4All en LinkedIn" title="Bit4All en LinkedIn"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com"> <img src="img/instagram.png" alt="Bit4All en Instagram" title="Bit4All en Instagram"></a>
+                        </li>
+                    </ul>
+                    <p> © Todos los derechos reservados - Bit4All 2020.</p>
+                </section>
+            </div>
+            
+        </footer>
     </body>
 </html>

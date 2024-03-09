@@ -3,14 +3,49 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bit4All - Nosotros</title>
+        <title>Bit4All - Nosotros</title> <!-- Cambiar en cada página -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/Normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
     </head>
     <body>
         <header>
-            <h1>Sobre nosotros</h1>
+            <h1 class="nombre-empresa">Bit<span>4</span>All</h1>
         </header>
+
+        <div class="contenedor-nav">
+            <nav class="contenedor nav-barra-principal">
+                <ul id="nav-bar-list">
+                    <li><img id="logo-nav" src="img/Bit4all_logo.png" alt="Imagen logo"></li>
+
+                    <li><a class="btn-nav" href="index.html">Inicio</a></li>
+                    <!-- Noticias, precios (tablas, listas)... -->
+                    <li><a class="btn-nav" href="nosotros.html">Sobre
+                            nosotros</a></li>
+                    <li><a class="btn-nav" href="aprende.html">Aprende</a></li>
+                    <li><a class="btn-nav" id="Inicio-sesion-nav"
+                            href="registro.html">Iniciar sesión /
+                            Registrarse</a></li>
+                    <!-- Formulario. A la derecha del todo. -->
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Hero -->
+        <section id="hero-section-nosotros">
+            <div id="hero-div-nosotros">
+                <h2>Sobre nosotros</h2>
+                <img src="./img/City_Landscape_Background.jpg" alt="Imagen hero ciudad">
+            </div>
+        </section>        
+        
+        <!-- Sobre la empresa -->
+
         <main>
-            <section class="historia">
+            <section class="sección-nosotros">
                 <h2>Nuestra historia</h2>
                 <p> Bit4All nació en 2020, cuando un grupo de 3 amigos de la
                     universidad decidimos
@@ -23,14 +58,14 @@
                 <p>Estamos orgullosos de nuestra historia y de nuestro
                     compromiso con el aprendizaje continuo.</p>
             </section>
-            <section class="equipo">
+            <section class="sección-nosotros">
                 <h2>Nuestro equipo</h2>
                 <p>En Bit4All, creemos que nuestro equipo es
                     nuestro mayor activo. Contamos con un equipo talentoso y
-                    dedicado de profesionales que están apasionados por
+                    dedicado de profesionales apasionados por
                     los criptoactivos.</p>
                 <p>Conoce a algunos de los miembros de nuestro equipo:</p>
-                <ul>
+                <ul id="lista-miembros">
                     <li>
                         <img src="img/CEO_IA.png"
                             alt="CEO imagen">
@@ -44,7 +79,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="contacto">
+            <section class="sección-nosotros">
                 <h2>Contáctanos</h2>
                 <p>Si tienes alguna pregunta o comentario, no dudes en
                     contactarnos. Puedes hacerlo por los siguientes medios:</p>
@@ -57,6 +92,57 @@
                 </ul>
             </section>
         </main>
-
+    
+        <footer class="site-footer">
+            <div class="footer-flex contenedor">
+                <div class="footer-navegacion">
+                    <h3>Índice</h3>
+                    <nav>
+                        <a class="enlace" href="#">Noticia del día</a>
+                        <a href="#">Cotización actualizada</a> <!-- DESPLEGABLE -->
+                        <a href="#">Planes y tarifas</a>
+                    </nav>
+                </div>
+                <div class="footer-navegacion">
+                    <h3>Sobre nosotros</h3>
+                    <nav>
+                        <a href="./nosotros.html">Nuestra historia</a>
+                        <a href="./nosotros.html">Nuestro equipo</a>
+                        <a href="#">Merchandising</a>
+                    </nav>
+                </div>
+                <div class="footer-navegacion">
+                    <h3>Aprende</h3>
+                    <nav>
+                        <a href="./aprende.html">Sobre bitcoin</a>
+                        <a href="./aprende.html">Sobre blockchain</a>
+                    </nav>
+                </div>
+                <div class="footer-navegacion">
+                    <h3>Accede</h3>
+                    <nav>
+                        <a href="./registro.html">Iniciar sesión</a>
+                        <a href="./registro.html">Registrarse</a>
+                    </nav>
+                </div>
+            </div>
+            <div>
+                <section  class="footer-RRSS">
+                    <ul>
+                        <li>
+                            <a href="mailto:Bit4All@gmail.com"> <img src="img/mail_logo.png" alt="Correo de Bit4All" title="Escribenos por correo"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedIn.com"> <img src="img/linkedin.png" alt="Bit4All en LinkedIn" title="Bit4All en LinkedIn"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com"> <img src="img/instagram.png" alt="Bit4All en Instagram" title="Bit4All en Instagram"></a>
+                        </li>
+                    </ul>
+                    <p> © Todos los derechos reservados - Bit4All 2020.</p>
+                </section>
+            </div>
+            
+        </footer>
     </body>
 </html>
