@@ -1,3 +1,6 @@
+
+/*Globales*/
+
 html {
     box-sizing: border-box;
     font-size: 90%;
@@ -9,7 +12,7 @@ html {
     box-sizing: inherit;
 }
 
-/*Globales*/
+
 body {
     font-family: "Raleway", sans-serif;
     font-size: 1.6rem;
@@ -18,7 +21,14 @@ body {
 img {
     max-width: 100%;
     display: block;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
+
+
 
 h1,
 h2,
@@ -46,11 +56,6 @@ a {
 }
 
 
-.contenedor {
-    max-width: 120rem;
-    margin-inline: auto;
-}
-
 .btn {
     background-color: #004b87;
     display: block;
@@ -65,7 +70,8 @@ a {
 
 .btn:hover {
     background-color: #0077cc;
-  }
+}
+
 
 /*Cabecera*/
 .nombre-empresa {
@@ -82,13 +88,12 @@ a {
 .contenedor-nav {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05), 0px 4px 28px rgba(0, 0, 0, 0.08);
     position: fixed;
-    top: 0px; 
-    z-index: 10; /* Para que se mantenga encima de todo en todo momento */
+    top: 0px;
+    z-index: 10;
+    /* Para que se mantenga encima de todo en todo momento */
 }
 
-.btn-nav:hover {
-    background-color: #004b87;
-}
+
 
 .btn-nav {
     background-color: rgb(155, 155, 155);
@@ -97,6 +102,12 @@ a {
     font-weight: 900;
     padding: 1rem;
     transition: background-color .3s ease-out;
+
+    
+}
+
+.btn-nav:hover {
+    background-color: #004b87;
 }
 
 #Inicio-sesion-nav {
@@ -107,9 +118,6 @@ a {
 #Inicio-sesion-nav:hover {
     background-color: #022b4e;
 }
-
-
-
 
 
 #nav-bar-list {
@@ -136,15 +144,49 @@ a {
     display: inline;
 }
 
-.contenedor-nav {
-    border-top: 1px solid #bbbbbb;
+
+@media (max-width: 768px) {
+    #nav-bar-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        height: auto;
+        font-size: 1em;
+        position: unset;
+    }
+
+    /* ocultar logo en móviles */
+    #logo-nav {
+        display: none;
+        margin-top: 0%;
+    }
+
+    .contenedor-nav {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05), 0px 4px 28px rgba(0, 0, 0, 0.08);
+        position: unset;
+        top: unset;
+        z-index: unset;
+    }
+
+
 }
+
+
+
+
+
+
 
 /* Hero-background */
 
 .hero-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .background-img-hero {
@@ -164,11 +206,11 @@ a {
     justify-content: justify;
     padding: 3rem;
 
-    h2{
+    h2 {
         text-shadow: #000 1px 1px 20px;
     }
 
-    a{
+    a {
         background-color: gray;
     }
 }
@@ -238,42 +280,49 @@ a {
     margin: 2rem auto;
     padding: 1rem;
     width: 80%;
-  }
 
-  
-  .suscripcion {
+    @media (max-width: 768px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 2rem auto;
+    }
+}
+
+.suscripcion {
     background-color: #f5f5f5;
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
     width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0 1rem; 
-  }
-  
-  .suscripcion h3 {
+    margin: 0 1rem;
+}
+
+.suscripcion h3 {
     font-size: 2rem;
     margin-top: 0;
-  }
-  
-  .suscripcion p {
+}
+
+.suscripcion p {
     margin: 1rem 0;
     font-size: 1rem;
-  }
-  
-  .suscripcion .btn-comprar {
+}
+
+.suscripcion .btn-comprar {
     background-color: #004b87;
     color: white;
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease-out;
-  }
-  
-  .suscripcion .btn-comprar:hover {
+}
+
+.suscripcion .btn-comprar:hover {
     background-color: #022b4e;
-  }
-  
+}
+
 
 
 /* FOOTER */
@@ -289,6 +338,12 @@ a {
     display: flex;
     gap: 2rem;
     text-align: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .footer-flex div {
@@ -310,11 +365,11 @@ a {
     flex-direction: column;
     gap: 1rem;
 
-    a{
+    a {
         color: rgb(203, 230, 235);
     }
 
-    a:hover{
+    a:hover {
         color: white;
         font-weight: 400;
     }
@@ -328,6 +383,7 @@ a {
     align-items: center;
     padding: 5%;
 
+
     ul {
         list-style-type: none;
         display: flex;
@@ -336,17 +392,20 @@ a {
         align-items: center;
         gap: 2rem;
 
-           
-
         img {
             max-height: 100%;
             max-width: 100%;
-            height: 5rem;
-            width: 5rem;
-          
+            height: 4rem;
+            width: 4rem;
+
+            @media (max-width: 768px) {
+                display:none;
+            }
+
         }
     }
-    p{
+
+    p {
         display: flex;
         color: white;
         font-size: 80%;
@@ -355,16 +414,86 @@ a {
 }
 
 
+.merchandising {
+    margin: 2rem auto;
+    width: 80%;
+    text-align: center;
+}
+
+.merchandising h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #004b87;
+    text-shadow: #000 1px 1px 1px;
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+        text-align: left;
+    }
+}
+
+.contenedor-tabla {
+    width: 100%;
+
+}
+
+table {
+    width: 100%;
+    border: 1px solid #004b87;
+    border-collapse: collapse;
+
+}
+
+th,
+td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: #004b87;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+td img {
+    max-width: 100px;
+}
+
+@media (max-width: 768px) {
+    table {
+        display: block;
+        width:fit-content;
+    }
+
+    th,
+    td {
+        display: block;
+    }
+
+}
+
+
 
 /************************ ^ Hasta aquí index y globales ^ ********************************/
-/************************ Desde aquí registro ********************************/
+/************************ v Desde aquí registro v ********************************/
 
-.formularios-registro{
+.formularios-registro {
     display: flex;
-    width: 100%;
     max-width: 100%;
-    flex-direction:row;
+    max-height: 100%;
+    width: 100%;
+    flex-direction: row;
     align-items: top;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 5%;
+        margin: 5%;
+    }
 }
 
 
@@ -374,68 +503,78 @@ form.registrarse {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgb(211, 211, 211, 0.5);
-  
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 10px;
-  }
 
-  ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 1rem;
-  }
-  
-  label {
-    display: block;
-    margin: 10px;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  input[type="radio"] {
-    margin-right: 5px;
-  }
-  
-  select {
-    margin-top: 5px;
-  }
-  
-  textarea {
-    height: 50px;
-    margin-top: 5px;   
-  }
-  
-    
-  input:focus,
-  select:focus,
-  textarea:focus {
-    outline: none;
-    border-color: #0099ff;
-  }
-  
-  ::placeholder {
-    color: #ccc;
-  }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 5%;
+        margin: 5%;
+        width: 90%;
+
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1rem;
+    }
+
+    label {
+        display: block;
+        margin: 10px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    select {
+        margin-top: 5px;
+    }
+
+    textarea {
+        height: 50px;
+        margin-top: 5px;
+    }
+
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #0099ff;
+    }
+
+    ::placeholder {
+        color: #ccc;
+    }
 }
 
 
 form.iniciar-sesion {
-    max-height:100%;
+    max-height: 100%;
     height: 80%;
     max-width: 100%;
     width: 40%;
@@ -443,46 +582,51 @@ form.iniciar-sesion {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgb(211, 211, 211, 0.5);
 
-  
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 10px;
-  }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        max-height: 100%;
+        width: max-content;
+        padding: 5%;
+        margin: 5%;
+    }
 
-  
-  label {
-    display: block;
-    margin: 10px;
-    font-weight: bold;
-  }
-  
-  input[type="email"],
-  input[type="password"]{
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  input[type="radio"] {
-    margin-right: 5px;
-  }
-  
-  
-    
-  input:focus {
-    outline: none;
-    border-color: #0099ff;
-  }
-  
-  ::placeholder {
-    color: #ccc;
-  }
+    h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: block;
+        margin: 10px;
+        font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #0099ff;
+    }
+
+    ::placeholder {
+        color: #ccc;
+    }
 }
 
 
@@ -490,13 +634,12 @@ form.iniciar-sesion {
 /************************ ^ Hasta aquí registro ^ ********************************/
 /************************ v Desde aquí aprende v ********************************/
 
-/* LA CLASE SECTION NO SE ESTÁ UTILIZANDO */
 
-img#background-img-hero-aprende { 
+img#background-img-hero-aprende {
     max-height: 100%;
     max-width: 100%;
     width: 100%;
-    object-fit:fill;
+    object-fit: fill;
 }
 
 .slogan-hero-aprende {
@@ -508,39 +651,6 @@ img#background-img-hero-aprende {
     justify-content: justify;
     padding: 3rem;
 }
-
-.lecciones {
-
-.contenedor-desplegable {
-    width: 300px;
-    margin: 20px auto;
-}
-
-.btn-desplegable {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.desplegable {
-    display: none;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-    position: absolute;
-    z-index: 1;
-}
-
-.btn-desplegable:hover .desplegable{
-    display: block;
-}
-}
-
-
 
 #main-aprende {
     display: flex;
@@ -558,9 +668,18 @@ img#background-img-hero-aprende {
         background-color: rgb(173, 216, 230, 0.5);
         border-radius: 2.5rem;
 
-        span{
+        span {
             color: #004b87;
             font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            padding: 1rem;
+            margin: 1rem;
+            
+            .btn{
+                border-radius: 5rem;
+            }
         }
     }
 }
@@ -568,7 +687,7 @@ img#background-img-hero-aprende {
 
 
 /************************ ^ Hasta aquí aprende ^ ********************************/
-/************************ v Desde aquí nosotros ^ ********************************
+/************************ v Desde aquí nosotros v ********************************
 
 /* Hero */
 
@@ -576,25 +695,33 @@ img#background-img-hero-aprende {
 
 
 #hero-div-nosotros {
-    position: relative; /* Permite el posicionamiento absoluto de sus hijos */
-  
-  
-  img {
-    display: block;
-    width: 100%; /* Ajusta el ancho de la imagen */
-  }
-  
-h2 {
-    position: absolute; /* Posiciona el texto de forma absoluta */
-    top: 30%; /* Centra el texto verticalmente */
-    left: 30%; /* Centra el texto horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta la posición del centro */
-    text-align: center; /* Centra el texto horizontalmente */
-    text-emphasis: bold;
-    font-size: 300%;
-    color: white;
-    text-shadow: #000 0px 0px 10px; 
-  }
+    position: relative;
+    /* Para el posicionamiento absoluto de sus hijos */
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    h2 {
+        position: absolute;
+        top: 30%;
+        /* Centra el texto verticalmente */
+        left: 30%;
+        /* Centra el texto horizontalmente */
+        transform: translate(-50%, -50%);
+        /* Ajusta la posición del centro */
+        text-align: center;
+        /* Centra el texto horizontalmente */
+        text-emphasis: bold;
+        font-size: 300%;
+        color: white;
+        text-shadow: #000 0px 0px 10px;
+
+        @media (max-width: 768px) {
+            margin: 3rem 6rem 0rem;
+        }
+    }
 
 }
 
@@ -611,13 +738,13 @@ h2 {
     border-radius: 15px;
     background-color: lightblue;
 
-    h2{
+    h2 {
         margin: 0rem;
         padding: 0rem;
-        text-shadow: #000 2px 2px 2px; 
+        text-shadow: #000 2px 2px 2px;
     }
 
-    #lista-miembros{
+    #lista-miembros {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -625,11 +752,15 @@ h2 {
         gap: 1rem;
         list-style: none;
 
-        img{
-        max-width: 100%;
-        max-height: 100%;
-        height: 80%;
-        width: 100%;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            height: 80%;
+            width: 100%;
         }
     }
 }
